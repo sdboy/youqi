@@ -3,65 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.1</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <groupId>net.eyeb</groupId>
+    <artifactId>youqi</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>net.eyeb</groupId>
+
   <artifactId>youqi-bean</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <name>youqi-bean</name>
   <description>youqi-bean</description>
   <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <java.version>17</java.version>
   </properties>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.modulith</groupId>
-      <artifactId>spring-modulith-starter-core</artifactId>
-    </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.modulith</groupId>
-      <artifactId>spring-modulith-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.modulith</groupId>
-        <artifactId>spring-modulith-bom</artifactId>
-        <version>1.0.0-M1</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
-  <repositories>
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 
 </project>

@@ -10,15 +10,27 @@
   </parent>
   <groupId>net.eyeb</groupId>
   <artifactId>youqi</artifactId>
+  <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>youqi</name>
   <description>youqi</description>
+  <modules>
+    <module>youqi-bean</module>
+    <module>youqi-dao</module>
+    <module>youqi-utils</module>
+    <module>youqi-common</module>
+    <module>youqi-service</module>
+    <module>youqi-api</module>
+    <module>youqi-controller</module>
+    <module>youqi-web</module>
+  </modules>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
     <java.version>17</java.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.2</junit.version>
     <spring-boot-starter-log4j2.version>3.1.1</spring-boot-starter-log4j2.version>
     <spring-boot-starter-data-redis.version>3.1.1</spring-boot-starter-data-redis.version>
     <spring-boot-starter-activemq.version>3.1.1</spring-boot-starter-activemq.version>
@@ -169,13 +181,50 @@
   </repositories>
   <!-- 代理仓库 -->
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
+  <!-- 版本说明：这里统一管理依赖的版本号 -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-bean</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-dao</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-utils</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-common</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-controller</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>net.eyeb</groupId>
+        <artifactId>youqi-web</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 </project>

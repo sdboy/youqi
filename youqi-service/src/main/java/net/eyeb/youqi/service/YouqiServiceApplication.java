@@ -1,4 +1,4 @@
-package com.example.youqi.service;
+package net.eyeb.youqi.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
